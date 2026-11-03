@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Da Nang, December 11–16 · Our Trip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#da251d;--deep:#8c1c13;--gold:#ffcd00;--lotus:#e8789c;--jade:#2e6b4f;--ink:#2b1414;--bg:#fbf0ee;--line:#efd3cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Poppins,system-ui,sans-serif}
+header{background:var(--red);color:#fff;padding:26px 18px 20px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-30px;top:-40px;width:210px;height:210px;background:var(--gold);opacity:.9;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.w{max-width:880px;margin:auto;position:relative;z-index:1}
+h1{font-weight:700;font-size:clamp(28px,6vw,44px);line-height:1.1;margin:0 0 6px}
+.sub{margin:0 0 12px;opacity:.92;max-width:520px}
+.hotel{display:inline-block;margin:0;background:#fff;color:var(--ink);border-radius:14px;padding:8px 14px;font-size:13px;max-width:560px}
+.hotel b{color:var(--red)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 18px;display:flex;gap:6px;overflow-x:auto;border-bottom:2px solid var(--gold)}
+nav button{flex:none;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:5px 14px;font:inherit;font-weight:500;cursor:pointer}
+nav button[aria-selected=true]{background:var(--red);border-color:var(--red);color:#fff}
+main{max-width:880px;margin:auto;padding:8px 18px 60px}
+h2{font-weight:700;font-size:26px;line-height:1.2;margin:18px 0 2px;color:var(--deep)}
+.date{color:var(--red);font-weight:600;margin:0}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* photo + real-footage scene */
+.ph{margin:12px 0 0}.ph img{display:block;width:100%;height:clamp(170px,32vw,260px);object-fit:cover;border-radius:18px;background:var(--line)}
+.ph figcaption{font-size:12px;opacity:.7;padding:4px 4px 0}
+.scene{position:relative;height:230px;border-radius:18px;overflow:hidden;margin:12px 0;background:linear-gradient(135deg,#5a0f0b,var(--red) 60%,var(--gold));color:#fff}
+.scene .bg,.scene video{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover}
+.bg.x{display:none}
+.fx{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,#0006),linear-gradient(100deg,transparent 40%,#ffffff2e 50%,transparent 60%) 0 0/250% 100%;animation:glare 7s linear infinite}
+@keyframes glare{to{background-position:0 0,-250% 0}}
+.scene em{position:absolute;left:14px;top:12px;z-index:3;font-style:normal;font-weight:600;font-size:14px;background:#000a;border-radius:999px;padding:3px 14px}
+.route{position:absolute;left:14px;right:90px;bottom:14px;z-index:3;display:flex;align-items:center;gap:10px;font-size:12px;font-weight:500;text-shadow:0 1px 3px #000}
+.trk{flex:1;height:4px;border-radius:4px;background:#fff6}
+.trk i{display:block;height:100%;width:0;background:var(--gold);border-radius:4px;position:relative;animation:go 9s ease-in-out forwards}
+.trk i::after{content:"";position:absolute;right:-6px;top:-4px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px #ffcd0066}
+@keyframes go{to{width:100%}}
+.replay{position:absolute;right:12px;bottom:10px;z-index:3;border:0;border-radius:999px;padding:4px 12px;background:#fff;font:inherit;font-size:12px;cursor:pointer}
+.k-plane .bg,.k-cable .bg{animation:pan 16s ease-in-out infinite alternate}
+.k-car .bg,.k-walk .bg{animation:zoom 12s linear infinite alternate}
+.k-walk .bg{animation:zoom 12s linear infinite alternate,bob .55s ease-in-out infinite alternate}
+.k-boat .bg{animation:sway 5s ease-in-out infinite alternate}
+.k-car .fx{background:repeating-linear-gradient(90deg,transparent 0 60px,#ffffff1f 60px 63px),radial-gradient(ellipse at center,transparent 55%,#0006);animation:streak .4s linear infinite}
+@keyframes pan{from{transform:translate(4%,1%) scale(1.04)}to{transform:translate(-4%,-1%) scale(1.1)}}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.14)}}
+@keyframes bob{to{translate:0 -6px}}
+@keyframes sway{from{transform:rotate(-1.2deg) translateY(-3px) scale(1.06)}to{transform:rotate(1.2deg) translateY(3px) scale(1.06)}}
+@keyframes streak{to{background-position:63px 0,0 0}}
+
+/* timeline, choices, budget */
+.pace{display:flex;align-items:center;gap:10px;margin:6px 0 14px;font-size:14px}
+.bar{flex:1;height:10px;border-radius:9px;background:var(--line);overflow:hidden;max-width:260px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--jade),var(--gold),var(--red));transition:width .5s}
+ol{list-style:none;padding:0;margin:0 0 20px;border-left:3px solid var(--line)}
+li{display:flex;gap:10px;padding:6px 0 6px 14px;position:relative;align-items:baseline}
+li::before{content:"";position:absolute;left:-8px;top:14px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--red)}
+li.eat::before{border-color:var(--gold)}li.rest::before{border-color:var(--jade);background:var(--jade)}li.shop::before{border-color:var(--lotus)}
+li.new{animation:pop .6s}@keyframes pop{from{background:#fff0b3}}
+li b{min-width:74px;font-weight:600}li span{flex:1}
+.c{flex:none;background:#fff3bd;color:var(--deep);border-radius:999px;padding:0 10px;font-size:12px;font-weight:600;white-space:nowrap}
+.q{background:#fff;border:2px solid var(--line);border-left:6px solid var(--red);border-radius:16px;padding:14px 16px;margin:0 0 14px}
+.q h3{margin:0 0 10px;font-size:16px;font-weight:600}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{flex:1 1 200px;text-align:left;border:2px solid var(--line);background:var(--bg);border-radius:12px;padding:9px 12px;font:inherit;color:var(--ink);cursor:pointer}
+.opts button small{display:block;opacity:.75;font-size:12px}
+.opts button[aria-pressed=true]{border-color:var(--red);background:#ffe6e2}
+.inp{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
+.inp label{font-size:12px;font-weight:500}.inp input{display:block;width:100%;margin-top:2px;padding:7px 10px;border:2px solid var(--line);border-radius:10px;font:inherit}
+details{background:#fff;border:2px solid var(--line);border-radius:14px;padding:8px 14px;margin:8px 0}
+summary{cursor:pointer;display:flex;justify-content:space-between;gap:10px;font-weight:600}
+details ul{list-style:none;padding:0;margin:8px 0 2px}details li{border:0;padding:2px 0;justify-content:space-between}details li::before{display:none}
+.tot{background:var(--red);color:#fff;border-radius:16px;padding:14px 18px;margin:12px 0;font-weight:600;font-size:18px}.tot small{display:block;font-weight:400;font-size:12px;opacity:.9}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.tools button{border:2px solid var(--red);background:var(--red);color:#fff;border-radius:999px;padding:7px 16px;font:inherit;cursor:pointer}
+.tools button.alt{background:none;color:var(--red)}
+.tips{display:grid;gap:6px;font-size:13px;margin-top:22px;padding:14px 16px;background:#fff3bd;border-radius:16px}
+.mini{display:flex;align-items:center;gap:10px;margin:4px 0;font-size:14px}.mini span{min-width:150px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media print{nav,.tools,.scene,.q,header::after{display:none}}
+</style>
+</head>
+<body>
+<header><div class="w">
+  <h1>Da Nang, December 11–16</h1>
+  <p class="sub">Manila ⇄ Da Nang · 7 travelers · 6 days. Pick what sounds good, watch the day change, and keep the slow parts slow.</p>
+  <p class="hotel"><b>Staying at Ocean Haven Hotel</b> · 295–297 Hồ Nghinh, Sơn Trà · 3-min walk to My Khe Beach · pool on site · check-in 2 PM, check-out 12 PM</p>
+</div></header>
+<nav id="tabs" role="tablist"></nav>
+<main id="app"></main>
+
+<script>
+/* ======== 1. DATA — edit freely ========
+   base item : [24h time, text, type, cost]   type = go | eat | rest | shop
+   cost      : per person in thousands of VND (900 = 900,000 VND). 0 = free or included.
+   choice    : l label, s small text, a added item [time,text,type,cost], x base times removed,
+               n animation "kind|From → To"  (kinds: plane car cable boat walk)
+   All prices are rough estimates. Ba Na Hills uses the 2026 foreign-visitor lunch combo. Check before booking. */
+const D=[
+{d:'Friday, Dec 11',t:'Touchdown in Da Nang',sc:'plane|Manila → Da Nang',
+ b:[['05:30','Flight Manila → Da Nang (flights not in budget)','go',0],['09:00','Arrive, immigration, baggage, airport van to Ocean Haven (drop bags; rooms ready at 2 PM)','go',40],['12:00','Brunch','eat',120],['14:00','Check in at Ocean Haven & rest','rest',0],['15:30','Café hopping / My Khe Beach stroll (3 min from the hotel)','go',100],['17:30','An Thuong area + custom pasalubong shops (bag, shoes, coat)','shop',0],['19:00','Vietnamese dinner','eat',200],['20:30','Dragon Bridge / Han River night walk (Grab there)','go',40],['22:00','Back to hotel','rest',0]],
+ q:[{h:'Everyone has been up since ~3 AM. How do you recharge?',o:[
+  {l:'Long group siesta',s:'90 minutes, then café',a:['14:30','Group siesta (90 min)','rest',0]},
+  {l:'Sunbeds at My Khe',s:'Fresh coconut, feet in the sand',x:['15:30'],a:['15:00','Sunbeds & coconut water at My Khe Beach','rest',100],n:'walk|Hotel → My Khe Beach'}]},
+ {h:'What’s for dinner?',o:[
+  {l:'Mì Quảng + bánh xèo',s:'Local classics, shared',x:['19:00'],a:['19:00','Dinner: mì Quảng, bánh xèo, nem lụi','eat',180]},
+  {l:'Beachside seafood',s:'Pick your own from the tank',x:['19:00'],a:['19:00','Dinner: fresh seafood by the beach','eat',400],n:'car|Hotel → Seafood strip'}]}]},
+{d:'Saturday, Dec 12',t:'Ba Na Hills & the Golden Bridge',sc:'cable|Base station → Ba Na summit',
+ b:[['07:00','Breakfast (confirm if included at the hotel)','eat',0],['07:30','Pick-up for Ba Na Hills tour (van share)','go',150],['09:00','Cable car + Golden Bridge (ticket with buffet lunch, 2026 price)','go',1300],['11:00','French Village','go',0],['12:30','Buffet lunch (included in the ticket)','eat',0],['17:30','Return to hotel','rest',0],['19:00','Dinner','eat',200],['20:30','Free time','rest',0]],
+ q:[{h:'After lunch up on the hill…',o:[
+  {l:'Fantasy Park & coaster',s:'Most rides are in the ticket',a:['14:00','Fantasy Park rides','go',0]},
+  {l:'Slow it down',s:'Gardens, wine cellar, a coffee with a view',a:['14:00','Gardens, wine cellar & coffee with a view','rest',100]}]},
+ {h:'Saturday night',o:[
+  {l:'Dragon Bridge fire show',s:'Runs Sat & Sun around 9 PM',a:['21:00','Dragon Bridge fire & water show (free)','go',40],n:'walk|Hotel → Dragon Bridge'},
+  {l:'Han River night cruise',s:'About 45 minutes on the water',x:['20:30'],a:['20:15','Han River night cruise','go',150],n:'boat|Han River night cruise'},
+  {l:'Early night',s:'Big day tomorrow',a:['21:00','Lights out','rest',0]}]}]},
+{d:'Sunday, Dec 13',t:'Da Nang Morning, Hoi An Evening',sc:'car|Da Nang → Hoi An',
+ b:[['05:30','Sunrise at My Khe Beach (sun comes up ≈ 6:15; 3-min walk)','go',0],['07:00','Breakfast','eat',0],['09:00','Hàn Market & Cồn Market: pasalubong and souvenirs','shop',0],['10:00','Pink Church (Da Nang Cathedral), check Mass times','go',0],['12:00','Lunch','eat',120],['13:30','Drive to Hoi An (~45 min, van share round trip)','go',150],['14:30','Coconut Forest basket boats','go',200],['16:15','Hoi An Ancient Town: old-town ticket, Japanese Bridge, lantern shops, café','go',200],['17:30','Lantern-lit Hoi An','go',0],['18:30','Dinner in Hoi An','eat',220],['20:00','Drive back to Da Nang','go',0],['21:00','Hotel','rest',0]],
+ q:[{h:'This is the busiest day. Sunrise or sleep in?',o:[
+  {l:'Sunrise at the beach',s:'Quiet, golden, worth it',n:'walk|Hotel → My Khe Beach'},
+  {l:'Sleep in',s:'Start with breakfast instead',x:['05:30'],a:['06:30','Sleep in','rest',0]}]},
+ {h:'One extra thing in Hoi An',o:[
+  {l:'Lantern boat ride',s:'Float on the Hoai River',a:['17:45','Lantern boat ride on the Hoai River','go',100],n:'boat|Hoai River, Hoi An'},
+  {l:'Street-food crawl',s:'Cao lầu, white rose dumplings, bánh mì',a:['18:00','Street-food crawl','eat',150]},
+  {l:'Foot massage pit-stop',s:'45 minutes, sit down',a:['17:45','Foot massage break (45 min)','rest',180]}]}]},
+{d:'Monday, Dec 14',t:'Son Tra, Lady Buddha & a Slow Afternoon',sc:'car|Hotel → Son Tra Peninsula',
+ b:[['08:00','Breakfast','eat',0],['09:00','Son Tra: Linh Ung Pagoda, Lady Buddha, viewpoints (free entry, van share)','go',150],['11:30','Seafood / local lunch','eat',350],['13:00','Back to hotel','rest',0],['14:00','Free time: pool, nap, nothing','rest',0],['16:00','Café hopping','go',100],['18:30','Dinner','eat',200],['20:00','Han River / Love Bridge (Grab)','go',40]],
+ q:[{h:'How should the afternoon feel?',o:[
+  {l:'Pool day',s:'The hotel has a pool'},
+  {l:'Group foot & shoulder massage',s:'60 minutes at a nearby spa (the hotel has none)',a:['15:00','Foot & shoulder massage (60 min)','rest',350]},
+  {l:'Hot spring & mud bath',s:'About 45 min away; replaces café time',x:['14:00','16:00'],a:['14:30','Hot spring & mud bath (Núi Thần Tài), with transport','rest',600],n:'car|Hotel → Hot springs'}]},
+ {h:'Tonight',o:[
+  {l:'Love Bridge walk',s:'The plan as written'},
+  {l:'Sun Wheel at Asia Park',s:'Evening lights and a big ride',a:['20:30','Sun Wheel at Asia Park','go',150],n:'car|Hotel → Asia Park'},
+  {l:'Early night',s:'Skip the walk',x:['20:00'],a:['20:30','Early night','rest',0]}]}]},
+{d:'Tuesday, Dec 15',t:'Marble Mountains & Final Dinner',sc:'car|Hotel → Marble Mountains',
+ b:[['08:00','Breakfast','eat',0],['09:00','Private van / driver (share)','go',100],['09:30','Marble Mountains: entry + lift, pagodas, viewpoints, shrines','go',60],['12:00','Lunch','eat',120],['13:30','Hotel rest / free time','rest',0],['15:30','Café: Cửa Ngõ or Nam House','go',100],['19:00','Final group dinner','eat',300],['20:00','Free evening','rest',0]],
+ q:[{h:'How much of the mountain?',o:[
+  {l:'Full: both caves',s:'Huyền Không & Âm Phủ; many steps',a:['10:30','Huyền Không & Âm Phủ caves (lots of steps)','go',0],n:'walk|Entrance → Huyền Không Cave'},
+  {l:'Light: take the lift',s:'Viewpoints and pagodas, stay cool',a:['10:30','Take the lift, viewpoints, shaded pagodas','rest',0]}]},
+ {h:'A quick stop at the base?',o:[
+  {l:'Non Nuoc stone carving village',s:'30 minutes, good pasalubong',a:['11:30','Non Nuoc stone-carving village','shop',0]},
+  {l:'Skip it',s:'Straight to lunch'}]},
+ {h:'Last sunset (the sun sets about 5:15 PM in December)',o:[
+  {l:'My Khe Beach',s:'Walk the sand together',a:['17:00','Sunset at My Khe Beach','go',0],n:'walk|Hotel → My Khe Beach'},
+  {l:'Rooftop bar',s:'Drinks with a view',a:['17:00','Rooftop sunset drinks','rest',250]},
+  {l:'Han River cruise',s:'Sunset from the water',a:['17:00','Han River sunset cruise','go',150],n:'boat|Han River at sunset'}]}]},
+{d:'Wednesday, Dec 16',t:'Massage, Last Shopping, Flight Home',sc:'plane|Da Nang → Manila',
+ b:[['08:00','Breakfast','eat',0],['09:00','Check out (hotel check-out is 12 PM), leave luggage at Ocean Haven','go',0],['09:30','Final shopping / café','shop',80],['11:30','Lunch','eat',120],['13:00','Group body massage (until 2:30)','rest',400],['15:00','Last coffee / shopping','shop',80],['17:00','Early dinner','eat',200],['18:30','Pick up luggage','go',0],['19:00','Airport van, about 13 min','go',40],['22:00','Flight Da Nang → Manila (flights not in budget)','go',0]],
+ q:[{h:'Early morning?',o:[
+  {l:'Goodbye walk at My Khe',s:'Before breakfast',a:['07:00','Last walk on My Khe Beach','go',0],n:'walk|Hotel → My Khe Beach'},
+  {l:'Sleep in',s:'Breakfast at 8, no rush'}]},
+ {h:'Before the airport',o:[
+  {l:'Shower & change',s:'Ask Ocean Haven about a late check-out or day room',a:['18:00','Shower & change before the flight','rest',0]},
+  {l:'Go straight',s:'Pick up bags and head out'}]}]}
+];
+/* Day photos: [file, caption, photographer]. A missing file just hides the photo. */
+const PH=[['photos/day1-dragon-bridge.jpg','Dragon Bridge, Da Nang',''],['photos/day2-golden-bridge.jpg','Golden Bridge, Ba Na Hills','Andreea Popa'],['photos/day3-hoi-an.jpg','Hoi An Ancient Town',''],['photos/day4-lady-buddha.jpg','Lady Buddha, Son Tra',''],['photos/day5-marble-mountains.jpg','Marble Mountains',''],['photos/day6-my-khe-beach.jpg','My Khe Beach','']];
+const TIPS=['December can be drizzly: pack a light rain jacket. Ba Na Hills is much cooler than the city.','Sunrise is about 6:15 AM and sunset about 5:15 PM, so plan golden-hour stops early.','The Dragon Bridge show runs Saturday and Sunday evenings. Check the time on the day.','Use the Grab app for cars, and book the 7-seat van ahead for Ba Na and Hoi An.','Some listings say Ocean Haven takes cash only, so confirm with the hotel and carry small VND bills.','Prices here are estimates, so recheck tickets and tour costs before you book.'];
+const LABELS=D.map((d,i)=>'Day '+(i+1)).concat(['Budget','My plan']);
+
+/* ======== 2. STATE ======== */
+let P={},B={n:7,r:450,rooms:3,rate:1000,nights:5,shop:3000},tab=0,last='';
+try{const s=JSON.parse(localStorage.getItem('dn26c')||'{}');P=s.P||{};Object.assign(B,s.B||{})}catch(e){}
+const save=()=>{try{localStorage.setItem('dn26c',JSON.stringify({P,B}))}catch(e){}};
+const $=s=>document.querySelector(s);
+const fmt=t=>{let[h,m]=t.split(':');h=+h;return((h+11)%12+1)+':'+m+(h<12?' AM':' PM')};
+const pickOf=(i,j)=>D[i].q[j].o[P[i+'.'+j]];
+const peso=k=>Math.round(k*1000/B.r);
+const fp=k=>'₱'+peso(k).toLocaleString()+' · ₫'+Math.round(k).toLocaleString()+'k';
+
+/* ======== 3. LOGIC ======== */
+function items(i){
+  const gone=[];D[i].q.forEach((q,j)=>{const o=pickOf(i,j);if(o&&o.x)gone.push(...o.x)});
+  const L=D[i].b.filter(r=>!gone.includes(r[0]));
+  D[i].q.forEach((q,j)=>{const o=pickOf(i,j);if(o&&o.a){const x=[...o.a];x.n=1;L.push(x)}});
+  return L.sort((a,b)=>a[0]<b[0]?-1:a[0]>b[0]?1:0);
+}
+const dayCost=i=>items(i).reduce((s,r)=>s+r[3],0);
+function pace(i){
+  const L=items(i),act=L.filter(r=>r[2]=='go').length*2+L.filter(r=>r[2]=='shop').length,rest=L.filter(r=>r[2]=='rest').length*3;
+  const p=act/(act+rest||1);return[Math.round(p*100),p<.45?'Relaxed':p<.62?'Balanced':'Busy'];
+}
+function tot(){
+  const t=$('#tot');if(!t)return;
+  let sum=0;
+  const rows=D.map((d,i)=>{const c=dayCost(i);sum+=c;return`<details><summary><span>Day ${i+1}: ${d.t}</span><span>${fp(c)}</span></summary><ul>${items(i).filter(r=>r[3]).map(r=>`<li><span>${r[1]}</span><span class="c">${fp(r[3])}</span></li>`).join('')}</ul></details>`}).join('');
+  const hot=B.rooms*B.rate*B.nights/(B.n||1),pp=peso(sum+hot)+B.shop;
+  t.innerHTML=rows+`<details><summary><span>Ocean Haven Hotel (${B.rooms} rooms × ${B.nights} nights)</span><span>${fp(hot)} each</span></summary><ul><li>Group total: ₱${peso(B.rooms*B.rate*B.nights).toLocaleString()}. Replace the placeholder rate with your real booking.</li></ul></details>
+  <details><summary><span>Pasalubong & shopping</span><span>₱${B.shop.toLocaleString()} each</span></summary></details>
+  <div class="tot">Per person: ₱${pp.toLocaleString()}<small>Whole group (${B.n}): ₱${(pp*B.n).toLocaleString()}. Flights and travel insurance are not included.</small></div>`;
+}
+
+/* ======== 4. SCENE: real photo or video with camera motion ======== */
+function play(el,spec){
+  if(!el||!spec)return;
+  const[k,cap]=spec.split('|'),[a,b]=cap.split(' → ');
+  el.className='scene k-'+k;
+  el.innerHTML=`<img class="bg" src="photos/scene-${k}.jpg" alt="" onerror="this.classList.add('x')"><video muted loop playsinline autoplay src="photos/scene-${k}.mp4" onerror="this.remove()"></video><div class="fx"></div><em>${cap}</em><div class="route"><span>${b?a:'Start'}</span><div class="trk"><i></i></div><span>${b||cap}</span></div><button class="replay" data-replay>Replay</button>`;
+  last=spec;
+}
+
+/* ======== 5. RENDER ======== */
+const ph=i=>{const p=PH[i];return p?`<figure class="ph"><img src="${p[0]}" alt="${p[1]}" loading="lazy" onerror="this.parentNode.remove()"><figcaption>${p[1]} · Photo: ${p[2]||'Unsplash contributor'} on Unsplash</figcaption></figure>`:''};
+const row=r=>`<li class="${r[2]}${r.n?' new':''}"><b>${fmt(r[0])}</b><span>${r[1]}</span>${r[3]?`<span class="c" title="₫${r[3]},000">₱${peso(r[3]).toLocaleString()}</span>`:''}</li>`;
+function render(){
+  $('#tabs').innerHTML=LABELS.map((l,i)=>`<button role="tab" aria-selected="${tab==i}" data-tab="${i}">${l}</button>`).join('');
+  const app=$('#app');
+  if(tab==6){
+    const f=[['n','Travelers'],['r','₫ per ₱1'],['rooms','Rooms'],['rate','Room rate / night (₫k)'],['nights','Nights'],['shop','Shopping each (₱)']];
+    app.innerHTML=`<h2>Budget</h2><p class="date">Per person, based on the choices you picked. Tap a day to see each place.</p><div class="inp">${f.map(([k,l])=>`<label>${l}<input type="number" min="0" data-b="${k}" value="${B[k]}"></label>`).join('')}</div><div id="tot"></div>`;tot();return;
+  }
+  if(tab==7){
+    app.innerHTML=`<h2>My plan</h2><p class="date">How busy is each day?</p>`+D.map((d,i)=>{const[p,l]=pace(i);return`<div class="mini"><span>Day ${i+1}: ${l}</span><div class="bar"><i style="width:${p}%"></i></div></div>`}).join('')+D.map((d,i)=>`<h2>${d.d}</h2><p class="date">${d.t}</p><ol>${items(i).map(row).join('')}</ol>`).join('')+`<div class="tools"><button data-copy>Copy plan</button><button class="alt" onclick="window.print()">Print</button><button class="alt" data-reset>Start over</button></div><div class="tips">${TIPS.map(t=>`<div>${t}</div>`).join('')}</div>`;return;
+  }
+  const d=D[tab],[p,l]=pace(tab);
+  app.innerHTML=`<h2>${d.t}</h2><p class="date">${d.d}</p>${ph(tab)}<div class="scene" id="scene"></div>
+  <div class="pace"><span>Pace: <b>${l}</b></span><div class="bar"><i style="width:${p}%"></i></div><span class="c">${fp(dayCost(tab))} each</span></div>
+  <ol>${items(tab).map(row).join('')}</ol>
+  ${d.q.map((q,j)=>`<section class="q"><h3>${q.h}</h3><div class="opts">${q.o.map((o,k)=>`<button data-pick="${tab}.${j}.${k}" aria-pressed="${P[tab+'.'+j]==k}">${o.l}<small>${o.s}</small></button>`).join('')}</div></section>`).join('')}`;
+}
+const show=s=>play($('#scene'),s);
+
+document.addEventListener('click',e=>{
+  const t=e.target.closest('button');if(!t)return;
+  if(t.dataset.tab){tab=+t.dataset.tab;render();if(tab<6)show(D[tab].sc);scrollTo({top:0})}
+  else if(t.dataset.pick){const[i,j,k]=t.dataset.pick.split('.');P[i+'.'+j]=+k;save();render();show(pickOf(i,j).n||last||D[i].sc)}
+  else if(t.dataset.replay)show(last);
+  else if(t.dataset.reset){P={};save();render()}
+  else if(t.dataset.copy){
+    const txt=D.map((d,i)=>d.d+' – '+d.t+'\n'+items(i).map(r=>'  '+fmt(r[0])+'  '+r[1]+(r[3]?'  (₱'+peso(r[3])+')':'')).join('\n')).join('\n\n');
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>t.textContent='Copied!').catch(()=>t.textContent='Select the text manually');
+  }
+});
+document.addEventListener('input',e=>{const k=e.target.dataset.b;if(k){B[k]=+e.target.value||0;save();tot()}});
+render();show(D[0].sc);
+</script>
+</body>
+</html>
